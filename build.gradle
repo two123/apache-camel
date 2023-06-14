@@ -1,0 +1,30 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '2.7.12'
+	id 'io.spring.dependency-management' version '1.1.0'
+}
+
+group = 'de.two123'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+
+	implementation "org.apache.camel.springboot:camel-servlet-starter:${versionCamel}"
+	implementation "org.apache.camel:camel-core:${versionCamel}"
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.yaml:snakeyaml:2.0'
+	implementation 'commons-io:commons-io:2.12.0'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.integration:spring-integration-test'
+	testImplementation "org.apache.camel:camel-test-junit5:${versionCamel}"
+	testImplementation "org.apache.camel:camel-test-spring-junit5:${versionCamel}"
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
