@@ -10,6 +10,27 @@
 
 ### [Simple File Route](src/main/java/de/two123/camel/simple/SimpleFileRoute.java)
 
+### RabbitMQ
+
+*Install Podman (macOS)*
+> brew install podman
+
+*Start Podman*
+
+> podman machine init<br>
+> podman machine start
+
+*IntelliJ & Podman*
+
+1. Settings - Build, Execution, Deployment - Docker
+2. New Profile "Podman" - SSH:
+   - SSH: core@127.0.0.1:62167
+   - Private Key <i>(macOS)</i>: /Users/<b>USER</b>/.ssh/podman-machine-default
+
+*RabbitMQ*
+> podman pull rabbitmq
+>
+
 ## Reference Documentation
 
 For further reference, please consider the following sections:
